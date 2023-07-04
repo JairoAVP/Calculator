@@ -9,37 +9,17 @@ Please handle this error so that the user won’t see those error message that c
 Estimated Hour: 0.5 hour"""
 
 
-
-
-def calculator():
-    while True:
+def sum(a, b):
+    return a + b
+while True:
         try:
-            number1 = float(input("Please enter the first number: "))
-            number2 = float(input("Please enter the second number: "))
-            operation = input("Please enter an operator (+, -, *,/): ")
+            number1 = float(input("Enter the first number: "))
+            number2 = float(input("Enter the second number: "))
 
+            result = sum(number1, number2)
 
-            if operation == "+":
-                answer = number1 + number2
-                print(f"{number1} + {number2} = {answer}")    
-            elif operation == "-":
-                answer = number1 - number2
-                print(f"{number1} - {number2} = {answer}")     
-            elif operation == "*":
-                answer = number1 * number2
-                print(f"{number1} * {number2} = {answer}")    
-            elif operation == "/":
-                answer = number1 / number2
-                print(f"{number1} / {number2} = {answer}") 
-            else:
-                print("Invalid Operation entered. Please try again.")
-                return
+            print(result)
             
-            print("Result:", answer)
+            
         except ValueError:
-                print("Invalid input. Please enter a valid number.")
-        except ZeroDivisionError:
-                print("Division by zero is not allowed")
-            
-            
-calculator()
+            print("Invalid input. Please enter a valid number.")
